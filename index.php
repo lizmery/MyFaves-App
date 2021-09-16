@@ -63,7 +63,7 @@
             <div class="form-group">
                 <input type="hidden" name="id" value="<?= $id; ?>">
                 <?php
-                    $query = 'SHOW TABLES FROM MyFavesDatabase';
+                    $query = 'SHOW TABLES FROM '.$cleardb_db;
                     $statement = $conn->prepare($query);
                     $statement->execute();
                     $result = $statement->get_result();

@@ -135,7 +135,7 @@
         $statement .= '(ID int(11) AUTO_INCREMENT, Photo varchar(255) null, Name varchar(100) not null, Genre varchar(255) not null,';
         $statement .= ' Rating int(2) null, Status varchar(13) not null, Comments varchar(300) null, PRIMARY KEY (ID))';
 
-        $result = mysqli_query(mysqli_connect('localhost', 'root', '', 'MyFavesDatabase'), $statement);
+        $result = mysqli_query($conn, $statement);
 
         header('location:index.php');
         $_SESSION['response'] = 'Successfully created new table!';
