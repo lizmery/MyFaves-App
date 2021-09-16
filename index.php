@@ -58,7 +58,7 @@
         <?php } unset($_SESSION['response']); ?>
         </div>
     </div>
-    <div class="mx-5">
+    <div class="mx-3">
         <form action="action.php" method="post" enctype="multipart/form-data" class="shadow p-5 mx-3 bg-white rounded">
             <div class="form-group">
                 <input type="hidden" name="id" value="<?= $id; ?>">
