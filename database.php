@@ -87,7 +87,7 @@
                         $new_statement->execute();
                         $new_result = $new_statement->get_result();
                     ?>
-                    <table class="table table-striped ">
+                    <table class="table table-striped table-responsive">
                         <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
