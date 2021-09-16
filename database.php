@@ -62,7 +62,7 @@
 
 <div id="accordion" class="accordion">
     <?php
-        $query = 'SHOW TABLES FROM MyFavesDatabase';
+        $query = 'SHOW TABLES FROM '.$cleardb_db;
         $statement = $conn->prepare($query);
         $statement->execute();
         $result = $statement->get_result();
