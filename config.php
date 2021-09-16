@@ -11,6 +11,6 @@
     $conn = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
     if($conn->connect_error) {
-        die('Could not connecto to the database.'.$conn->connect_error);
+        die('Could not connect to the database.'.$conn->connect_error);
     }
 ?>
