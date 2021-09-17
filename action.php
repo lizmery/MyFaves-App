@@ -11,6 +11,7 @@
     $comments = "";
     $image = "";
 
+    // Add item to database
     if(isset($_POST['add'])) {
         $table = $_POST['table'];
         $table_name = $_POST['newtable'];
@@ -41,6 +42,7 @@
         $_SESSION['response_type'] = 'success';
     }
 
+    // Delete item from database
     if(isset($_GET['delete'])) {
         $id = $_GET['delete'];
 
@@ -64,6 +66,7 @@
         $_SESSION['response_type'] = 'danger';
     }
 
+    // Get current item information
     if(isset($_GET['edit'])) {
         $id = $_GET['edit'];
 
@@ -85,6 +88,7 @@
         $update = true;
     }
 
+    // Update item information
     if(isset($_POST['update'])) {
         $id = $_POST['id'];
         $name = $_POST['name'];
@@ -112,6 +116,7 @@
         $_SESSION['response_type'] = 'secondary';
     }
 
+    // Get item information to display in modal 
     if(isset($_GET['id'])) {
         $id = $_GET['id'];
         $query = 'SELECT * FROM anime WHERE ID=?';
@@ -130,6 +135,7 @@
         $vimage = $row['Photo'];
     }
 
+    // Create new table in database
     function createTable($table_name) {
         $statement = 'CREATE TABLE '.$table_name;
         $statement .= '(ID int(11) AUTO_INCREMENT, Photo varchar(255) null, Name varchar(100) not null, Genre varchar(255) not null,';
@@ -141,5 +147,4 @@
         $_SESSION['response'] = 'Successfully created new table!';
         $_SESSION['response_type'] = 'success';
     }
-
 ?>

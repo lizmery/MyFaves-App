@@ -144,6 +144,7 @@
     </div>
 </div>
 
+<!-- Javascript -->
 <script src="script.js"></script>
 </body>
 </html>

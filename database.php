@@ -20,6 +20,7 @@
     <!-- Bootstrap theme from Bootswatch -->
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
@@ -79,7 +80,7 @@
         </h2>
         <div id="<?= $r; ?>" class="accordion-collapse collapse" aria-labelledby="heading-<?= $r; ?>" data-parent="#accordion">
             <div class="accordion-body">
-            <div class="container-fluid mt-5 mb-5">
+                <div class="container-fluid mt-5 mb-5">
                     <h2 class="text-center mb-5 text-capitalize">favorite <?= $r; ?><span class="text-lowercase">(s)</span></h2>
                     <?php
                         $new_query = 'SELECT * FROM '.$r;
@@ -87,7 +88,7 @@
                         $new_statement->execute();
                         $new_result = $new_statement->get_result();
                     ?>
-                    <table class="table table-striped table-responsive">
+                    <table class="table table-striped table-responsive-lg">
                         <thead class="thead-dark">
                             <tr>
                                 <th>#</th>
@@ -123,8 +124,6 @@
     </div>
     <?php } } ?>
 </div>
-   
-    
 
 <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
