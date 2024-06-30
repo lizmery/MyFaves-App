@@ -67,8 +67,7 @@
         $statement = $conn->prepare($query);
         $statement->execute();
         $result = $statement->get_result();
-    ?>
-    <?php 
+  
         while ($row = $result->fetch_assoc()) {
             foreach ($row as $r) { 
     ?>
